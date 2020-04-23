@@ -1,12 +1,12 @@
-import {AuthenticationController, UsersController} from './controllers'
+import {AttachmentResourceController, CBLController} from './controllers'
 
 class Microservice {
-  public authenticationController: AuthenticationController
-  public usersController: UsersController
+  public attachmentResourceController: AttachmentResourceController
+  public cBLController: CBLController
 
   constructor () {
-    this.authenticationController = new AuthenticationController()
-    this.usersController = new UsersController()
+    this.attachmentResourceController = new AttachmentResourceController()
+    this.cBLController = new CBLController()
   }
 }
 

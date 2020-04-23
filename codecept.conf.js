@@ -1,4 +1,4 @@
-const REST_API_URL = process.env.API_RUN_ENV || 'https://api.github.com'
+const REST_API_URL = process.env.API_RUN_ENV || 'http://ha.app.qc.zycus.net:53680/einvoice/soa-services/restapi'
 
 exports.config = {
   tests: './*_test.js',
