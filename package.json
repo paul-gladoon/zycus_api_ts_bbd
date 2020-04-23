@@ -10,7 +10,8 @@
     "allure:generate": "npx allure generate output",
     "allure:serve": "npx allure serve output",
     "eslint:run": "eslint './**/*.js'",
-    "eslint:run-autofix": "eslint --fix './**/*.js'"
+    "eslint:run-autofix": "eslint --fix './**/*.js'",
+    "tsc": "tsc"
   },
   "husky": {
     "hooks": {
