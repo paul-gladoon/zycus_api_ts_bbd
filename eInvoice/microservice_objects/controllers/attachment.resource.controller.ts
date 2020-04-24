@@ -20,7 +20,7 @@ class AttachmentResourceController {
   }
 
   public async postAttachmentAdd(moduleName: string, requestBody: object, requestHeaders?: object) {
-    return await I.sendPostRequest(`${this.root}/${moduleName}${this.endpointAdd}`, requestBody, requestHeaders || this.headers)
+    return I.sendPostRequest(`${this.root}/${moduleName}${this.endpointAdd}`, requestBody, requestHeaders || this.headers)
   }
 }
 
