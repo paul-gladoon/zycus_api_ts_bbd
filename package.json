@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "POC project for zycus-automation",
   "scripts": {
-    "test": "codeceptjs run-multiple --all",
-    "test:firefox": "codeceptjs run-multiple --all --profile='firefox'",
-    "test:ie": "codeceptjs run --profile='internet explorer'",
     "debug": "DEBUG=true codeceptjs run --debug",
     "allure:generate": "npx allure generate output",
     "allure:serve": "npx allure serve output",
@@ -43,6 +40,7 @@
   },
   "dependencies": {
     "@types/chai": "^4.2.10",
+    "@types/chai-json-schema": "^1.4.5",
     "@types/cucumber": "^6.0.1",
     "@types/node": "^13.7.7",
     "allure-commandline": "2.13.0",
