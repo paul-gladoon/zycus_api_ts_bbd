@@ -1,8 +1,9 @@
 import 'codeceptjs'
 import * as chai from 'chai'
-chai.use(require('chai-json-schema'))
-const {assert} = chai
+import * as schema from 'chai-json-schema'
 
+chai.use(schema)
+const {assert} = chai
 const {I} = inject()
 
 class AttachmentResourceController {
