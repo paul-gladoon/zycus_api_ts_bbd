@@ -32,7 +32,10 @@ class CBLController {
   }
 
   public async getCompanyEntities(requestUserId: string, requestHeaders?: object) {
-    return I.sendGetRequest(`/CBL/company/${requestUserId}`, requestHeaders || this.headers)
+    const response = await I.sendGetRequest(`/CBL/company/${requestUserId}`, requestHeaders || this.headers)
+    const {cbl: {companyEntities}} = schemas
+
+    return this.switcher(response, companyEntities)
   }
 
   public async getBusinessUnits(requestUserId: string, companyCode: string, requestHeaders?: object) {
@@ -43,14 +46,21 @@ class CBLController {
   }
 
   private switcher(responseData, schemaObj) {
+    function schemaChecker(schema) {
+      if (!schema) throw new Error(`Please add schema for the status "${responseData.status}"`)
+    }
+
     switch(responseData.status) {
       case 200:
+        schemaChecker(schemaObj.schema200)
         assert.jsonSchema(responseData.data, schemaObj.schema200, `The response doesn't match the schema for 200 status.`)
         return responseData
       case 204:
+        schemaChecker(schemaObj.schema204)
         assert.jsonSchema(responseData.data, schemaObj.schema204, `The response doesn't match the schema for 204 status.`)
         return responseData
       case 400:
+        schemaChecker(schemaObj.schema400)
         assert.jsonSchema(responseData.data, schemaObj.schema400, `The response doesn't match the schema for 400 status.`)
         return responseData
       default:
