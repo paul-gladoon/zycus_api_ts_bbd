@@ -1,0 +1,1001 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "additionalProperties": true,
+    "required": [
+        "trackingNumber",
+        "facetResult",
+        "statResult",
+        "pagination",
+        "result",
+        "processingErrors"
+    ],
+    "properties": {
+        "trackingNumber": {
+            "$id": "#/properties/trackingNumber",
+            "type": "string"
+        },
+        "facetResult": {
+            "$id": "#/properties/facetResult",
+            "type": "null"
+        },
+        "statResult": {
+            "$id": "#/properties/statResult",
+            "type": "null"
+        },
+        "pagination": {
+            "$id": "#/properties/pagination",
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+                "totalRecords",
+                "maxRows",
+                "pageNumber"
+            ],
+            "properties": {
+                "totalRecords": {
+                    "$id": "#/properties/pagination/properties/totalRecords",
+                    "type": "integer"
+                },
+                "maxRows": {
+                    "$id": "#/properties/pagination/properties/maxRows",
+                    "type": "integer"
+                },
+                "pageNumber": {
+                    "$id": "#/properties/pagination/properties/pageNumber",
+                    "type": "integer"
+                }
+            }
+        },
+        "result": {
+            "$id": "#/properties/result",
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/result/items",
+                "type": "object",
+                "additionalProperties": true,
+                "required": [
+                    "tenantId",
+                    "createdBy",
+                    "createdOn",
+                    "status",
+                    "statusComments",
+                    "archive",
+                    "error",
+                    "errorReasons",
+                    "modifiedBy",
+                    "modifiedOn",
+                    "version",
+                    "invoiceId",
+                    "invoiceUniqueId",
+                    "comments",
+                    "invoiceNumber",
+                    "invoiceDate",
+                    "description",
+                    "purchaseOrderNumber",
+                    "buyer",
+                    "supplierId",
+                    "supplierName",
+                    "supplierAddressId",
+                    "suppAddress",
+                    "supplierAddressIdRemit",
+                    "suppAddressRemit",
+                    "supplierCurrency",
+                    "supplierContact",
+                    "discountLevel",
+                    "discountType",
+                    "discountValue",
+                    "extraCharges",
+                    "freightCharges",
+                    "insuranceCharges",
+                    "exciseDuties",
+                    "totalAmount",
+                    "grossTotalAmount",
+                    "submittedOn",
+                    "approvedOn",
+                    "closedOn",
+                    "resubmitionCount",
+                    "applyNoTaxes",
+                    "baseCurrency",
+                    "baseExchangeRate",
+                    "baseTotal",
+                    "taxAmount",
+                    "chargedAmount",
+                    "chargedTaxAmount",
+                    "batchProcessing",
+                    "docType",
+                    "docTypeDesc",
+                    "purchaseType",
+                    "purchaseTypeCode",
+                    "pending",
+                    "companyCode",
+                    "referenceValue",
+                    "attachmentIds",
+                    "externalId",
+                    "splitCostingLevel",
+                    "splitCostingType",
+                    "referenceType",
+                    "paymentMethod",
+                    "origin",
+                    "purchaseTypeSetting",
+                    "ptGLAccountSetting",
+                    "supplierERPId",
+                    "supplierAddressERPId",
+                    "erpId",
+                    "workflowId",
+                    "workflowInstanceId",
+                    "processEformId",
+                    "dynamicFormId",
+                    "dynamicInstanceId",
+                    "assignProject",
+                    "projectSettingStatus",
+                    "customerReferenceId",
+                    "contractNumber",
+                    "contractId",
+                    "contractType",
+                    "paymentTermId",
+                    "businessUnitCode",
+                    "locationCode",
+                    "billToCode",
+                    "invoiceToCode",
+                    "attachmentsStr",
+                    "requestEdit",
+                    "epDiscountDueDate",
+                    "epDiscountedAmount",
+                    "invoiceDateGMT",
+                    "prePOAllowDays",
+                    "suppLocationStr",
+                    "defaultSupplierRemitTOAddress",
+                    "supplierTaxExampt",
+                    "transactionId",
+                    "zsnInvoiceCreator",
+                    "zsnInvoiceCreatorEmailId",
+                    "supplierRemitAddressERPId",
+                    "shipToCodeType",
+                    "shipToCode",
+                    "shipToLocation",
+                    "selfAssessedAmt",
+                    "useTaxApplicable",
+                    "newGrossTotalAmount",
+                    "applyTaxOnGrossTotal",
+                    "newTotalTaxAmount",
+                    "supplierBankingDetailsId",
+                    "supplierBankingDetails",
+                    "visibilityRule",
+                    "entitySettings",
+                    "dueDate",
+                    "matchStatus",
+                    "approvedGrossTotalAmount",
+                    "paymentInApproval",
+                    "paidAmount",
+                    "matchedOn",
+                    "paidOn",
+                    "paymentApprovedOn",
+                    "confirmStatus",
+                    "paymentStatus",
+                    "autoMatched",
+                    "onHold",
+                    "invoiceType",
+                    "paymentWorkflowId",
+                    "paymentInstanceId",
+                    "utilizeBudget",
+                    "budgetSettingsMap",
+                    "systemAttributes",
+                    "integrationStatus",
+                    "integrationErrorReasons",
+                    "adjustedAmount",
+                    "editedOn",
+                    "editRequestedOn",
+                    "cmAdjusted",
+                    "sendToReadyForApproval",
+                    "epdApplyForPayment",
+                    "ocrAttachmentId",
+                    "deliverToType",
+                    "deliverTo",
+                    "invoiceClosingType",
+                    "invoiceApprovalPendingWith",
+                    "onHoldReleasedType",
+                    "onHoldReleasedOn",
+                    "submitForCodingUserId",
+                    "requester",
+                    "esignAttachment",
+                    "templateId",
+                    "recurringInvoiceDate",
+                    "templateName",
+                    "zsnInvalidData",
+                    "useTaxAdjustedAmount",
+                    "bbAdjustedAmount",
+                    "validCOAForm",
+                    "refId",
+                    "originId",
+                    "originType",
+                    "poInvoiceExtractionMute",
+                    "locationSentBySupplier",
+                    "extractedBy",
+                    "previousStatus",
+                    "emailType",
+                    "emailSubject",
+                    "milestone",
+                    "poRequester",
+                    "invoiceItems",
+                    "attachments",
+                    "invoiceTaxes",
+                    "invoiceCostings",
+                    "invoiceAccountings",
+                    "systemAttributesStr",
+                    "budgetSettingsMapString",
+                    "integrationErrorReasonsStr",
+                    "documentAmount",
+                    "invoiceCatLogItems",
+                    "coaflexiFormId",
+                    "persistObject",
+                    "supplierAddressJSON",
+                    "supplierAddressRemitJSON",
+                    "defaultSupplierRemitTOAddressJSON",
+                    "coaflexiFormInstanceId",
+                    "coaflexiFormInstanceVersion",
+                    "supplierBankingDetailsJSON",
+                    "errorReasonsStr"
+                ],
+                "properties": {
+                    "tenantId": {
+                        "$id": "#/properties/result/items/properties/tenantId",
+                        "type": "string"
+                    },
+                    "createdBy": {
+                        "$id": "#/properties/result/items/properties/createdBy",
+                        "type": "string"
+                    },
+                    "createdOn": {
+                        "$id": "#/properties/result/items/properties/createdOn",
+                        "type": "integer"
+                    },
+                    "status": {
+                        "$id": "#/properties/result/items/properties/status",
+                        "type": "integer"
+                    },
+                    "statusComments": {
+                        "$id": "#/properties/result/items/properties/statusComments",
+                        "type": ["null", "string"]
+                    },
+                    "archive": {
+                        "$id": "#/properties/result/items/properties/archive",
+                        "type": "boolean"
+                    },
+                    "error": {
+                        "$id": "#/properties/result/items/properties/error",
+                        "type": "boolean"
+                    },
+                    "errorReasons": {
+                        "$id": "#/properties/result/items/properties/errorReasons",
+                        "type": "object",
+                        "additionalProperties": true
+                    },
+                    "modifiedBy": {
+                        "$id": "#/properties/result/items/properties/modifiedBy",
+                        "type": "string"
+                    },
+                    "modifiedOn": {
+                        "$id": "#/properties/result/items/properties/modifiedOn",
+                        "type": "integer"
+                    },
+                    "version": {
+                        "$id": "#/properties/result/items/properties/version",
+                        "type": "integer"
+                    },
+                    "invoiceId": {
+                        "$id": "#/properties/result/items/properties/invoiceId",
+                        "type": "string"
+                    },
+                    "invoiceUniqueId": {
+                        "$id": "#/properties/result/items/properties/invoiceUniqueId",
+                        "type": "string"
+                    },
+                    "comments": {
+                        "$id": "#/properties/result/items/properties/comments",
+                        "type": ["null", "string"]
+                    },
+                    "invoiceNumber": {
+                        "$id": "#/properties/result/items/properties/invoiceNumber",
+                        "type": "string"
+                    },
+                    "invoiceDate": {
+                        "$id": "#/properties/result/items/properties/invoiceDate",
+                        "type": "integer"
+                    },
+                    "description": {
+                        "$id": "#/properties/result/items/properties/description",
+                        "type": ["string", "null"]
+                    },
+                    "purchaseOrderNumber": {
+                        "$id": "#/properties/result/items/properties/purchaseOrderNumber",
+                        "type": ["string", "null"]
+                    },
+                    "buyer": {
+                        "$id": "#/properties/result/items/properties/buyer",
+                        "type": "string"
+                    },
+                    "supplierId": {
+                        "$id": "#/properties/result/items/properties/supplierId",
+                        "type": "string"
+                    },
+                    "supplierName": {
+                        "$id": "#/properties/result/items/properties/supplierName",
+                        "type": "string"
+                    },
+                    "supplierAddressId": {
+                        "$id": "#/properties/result/items/properties/supplierAddressId",
+                        "type": "string"
+                    },
+                    "suppAddress": {
+                        "$id": "#/properties/result/items/properties/suppAddress",
+                        "type": "null"
+                    },
+                    "supplierAddressIdRemit": {
+                        "$id": "#/properties/result/items/properties/supplierAddressIdRemit",
+                        "type": "string"
+                    },
+                    "suppAddressRemit": {
+                        "$id": "#/properties/result/items/properties/suppAddressRemit",
+                        "type": "null"
+                    },
+                    "supplierCurrency": {
+                        "$id": "#/properties/result/items/properties/supplierCurrency",
+                        "type": "string"
+                    },
+                    "supplierContact": {
+                        "$id": "#/properties/result/items/properties/supplierContact",
+                        "type": ["null", "string"]
+                    },
+                    "discountLevel": {
+                        "$id": "#/properties/result/items/properties/discountLevel",
+                        "type": "integer"
+                    },
+                    "discountType": {
+                        "$id": "#/properties/result/items/properties/discountType",
+                        "type": "integer"
+                    },
+                    "discountValue": {
+                        "$id": "#/properties/result/items/properties/discountValue",
+                        "type": "integer"
+                    },
+                    "extraCharges": {
+                        "$id": "#/properties/result/items/properties/extraCharges",
+                        "type": "integer"
+                    },
+                    "freightCharges": {
+                        "$id": "#/properties/result/items/properties/freightCharges",
+                        "type": "integer"
+                    },
+                    "insuranceCharges": {
+                        "$id": "#/properties/result/items/properties/insuranceCharges",
+                        "type": "integer"
+                    },
+                    "exciseDuties": {
+                        "$id": "#/properties/result/items/properties/exciseDuties",
+                        "type": "integer"
+                    },
+                    "totalAmount": {
+                        "$id": "#/properties/result/items/properties/totalAmount",
+                        "type": ["integer", "number"]
+                    },
+                    "grossTotalAmount": {
+                        "$id": "#/properties/result/items/properties/grossTotalAmount",
+                        "type": ["integer", "number"]
+                    },
+                    "submittedOn": {
+                        "$id": "#/properties/result/items/properties/submittedOn",
+                        "type": ["integer", "null"]
+                    },
+                    "approvedOn": {
+                        "$id": "#/properties/result/items/properties/approvedOn",
+                        "type": ["null", "number"]
+                    },
+                    "closedOn": {
+                        "$id": "#/properties/result/items/properties/closedOn",
+                        "type": "null"
+                    },
+                    "resubmitionCount": {
+                        "$id": "#/properties/result/items/properties/resubmitionCount",
+                        "type": "integer"
+                    },
+                    "applyNoTaxes": {
+                        "$id": "#/properties/result/items/properties/applyNoTaxes",
+                        "type": "boolean"
+                    },
+                    "baseCurrency": {
+                        "$id": "#/properties/result/items/properties/baseCurrency",
+                        "type": "string"
+                    },
+                    "baseExchangeRate": {
+                        "$id": "#/properties/result/items/properties/baseExchangeRate",
+                        "type": "number"
+                    },
+                    "baseTotal": {
+                        "$id": "#/properties/result/items/properties/baseTotal",
+                        "type": "number"
+                    },
+                    "taxAmount": {
+                        "$id": "#/properties/result/items/properties/taxAmount",
+                        "type": ["integer", "number"]
+                    },
+                    "chargedAmount": {
+                        "$id": "#/properties/result/items/properties/chargedAmount",
+                        "type": "integer"
+                    },
+                    "chargedTaxAmount": {
+                        "$id": "#/properties/result/items/properties/chargedTaxAmount",
+                        "type": "integer"
+                    },
+                    "batchProcessing": {
+                        "$id": "#/properties/result/items/properties/batchProcessing",
+                        "type": "boolean"
+                    },
+                    "docType": {
+                        "$id": "#/properties/result/items/properties/docType",
+                        "type": "integer"
+                    },
+                    "docTypeDesc": {
+                        "$id": "#/properties/result/items/properties/docTypeDesc",
+                        "type": "string"
+                    },
+                    "purchaseType": {
+                        "$id": "#/properties/result/items/properties/purchaseType",
+                        "type": ["string", "null"]
+                    },
+                    "purchaseTypeCode": {
+                        "$id": "#/properties/result/items/properties/purchaseTypeCode",
+                        "type": ["string", "null"]
+                    },
+                    "pending": {
+                        "$id": "#/properties/result/items/properties/pending",
+                        "type": "boolean"
+                    },
+                    "companyCode": {
+                        "$id": "#/properties/result/items/properties/companyCode",
+                        "type": "string"
+                    },
+                    "referenceValue": {
+                        "$id": "#/properties/result/items/properties/referenceValue",
+                        "type": ["string", "null"]
+                    },
+                    "attachmentIds": {
+                        "$id": "#/properties/result/items/properties/attachmentIds",
+                        "type": "array",
+                        "additionalItems": true,
+                        "items": {
+                            "$id": "#/properties/result/items/properties/attachmentIds/items",
+                            "type": ["null", "string"]
+                        }
+                    },
+                    "externalId": {
+                        "$id": "#/properties/result/items/properties/externalId",
+                        "type": "string"
+                    },
+                    "splitCostingLevel": {
+                        "$id": "#/properties/result/items/properties/splitCostingLevel",
+                        "type": "integer"
+                    },
+                    "splitCostingType": {
+                        "$id": "#/properties/result/items/properties/splitCostingType",
+                        "type": "integer"
+                    },
+                    "referenceType": {
+                        "$id": "#/properties/result/items/properties/referenceType",
+                        "type": "integer"
+                    },
+                    "paymentMethod": {
+                        "$id": "#/properties/result/items/properties/paymentMethod",
+                        "type": "integer"
+                    },
+                    "origin": {
+                        "$id": "#/properties/result/items/properties/origin",
+                        "type": "integer"
+                    },
+                    "purchaseTypeSetting": {
+                        "$id": "#/properties/result/items/properties/purchaseTypeSetting",
+                        "type": "boolean"
+                    },
+                    "ptGLAccountSetting": {
+                        "$id": "#/properties/result/items/properties/ptGLAccountSetting",
+                        "type": "boolean"
+                    },
+                    "supplierERPId": {
+                        "$id": "#/properties/result/items/properties/supplierERPId",
+                        "type": ["null", "string"]
+                    },
+                    "supplierAddressERPId": {
+                        "$id": "#/properties/result/items/properties/supplierAddressERPId",
+                        "type": ["null", "string"]
+                    },
+                    "erpId": {
+                        "$id": "#/properties/result/items/properties/erpId",
+                        "type": ["null", "string"]
+                    },
+                    "workflowId": {
+                        "$id": "#/properties/result/items/properties/workflowId",
+                        "type": "string"
+                    },
+                    "workflowInstanceId": {
+                        "$id": "#/properties/result/items/properties/workflowInstanceId",
+                        "type": ["string", "null"]
+                    },
+                    "processEformId": {
+                        "$id": "#/properties/result/items/properties/processEformId",
+                        "type": ["null", "string"]
+                    },
+                    "dynamicFormId": {
+                        "$id": "#/properties/result/items/properties/dynamicFormId",
+                        "type": ["null", "string"]
+                    },
+                    "dynamicInstanceId": {
+                        "$id": "#/properties/result/items/properties/dynamicInstanceId",
+                        "type": ["null", "string"]
+                    },
+                    "assignProject": {
+                        "$id": "#/properties/result/items/properties/assignProject",
+                        "type": "boolean"
+                    },
+                    "projectSettingStatus": {
+                        "$id": "#/properties/result/items/properties/projectSettingStatus",
+                        "type": "string"
+                    },
+                    "customerReferenceId": {
+                        "$id": "#/properties/result/items/properties/customerReferenceId",
+                        "type": "null"
+                    },
+                    "contractNumber": {
+                        "$id": "#/properties/result/items/properties/contractNumber",
+                        "type": "null"
+                    },
+                    "contractId": {
+                        "$id": "#/properties/result/items/properties/contractId",
+                        "type": "null"
+                    },
+                    "contractType": {
+                        "$id": "#/properties/result/items/properties/contractType",
+                        "type": "integer"
+                    },
+                    "paymentTermId": {
+                        "$id": "#/properties/result/items/properties/paymentTermId",
+                        "type": "string"
+                    },
+                    "businessUnitCode": {
+                        "$id": "#/properties/result/items/properties/businessUnitCode",
+                        "type": "string"
+                    },
+                    "locationCode": {
+                        "$id": "#/properties/result/items/properties/locationCode",
+                        "type": "string"
+                    },
+                    "billToCode": {
+                        "$id": "#/properties/result/items/properties/billToCode",
+                        "type": "string"
+                    },
+                    "invoiceToCode": {
+                        "$id": "#/properties/result/items/properties/invoiceToCode",
+                        "type": "string"
+                    },
+                    "attachmentsStr": {
+                        "$id": "#/properties/result/items/properties/attachmentsStr",
+                        "type": "string"
+                    },
+                    "requestEdit": {
+                        "$id": "#/properties/result/items/properties/requestEdit",
+                        "type": "boolean"
+                    },
+                    "epDiscountDueDate": {
+                        "$id": "#/properties/result/items/properties/epDiscountDueDate",
+                        "type": ["integer", "null"]
+                    },
+                    "epDiscountedAmount": {
+                        "$id": "#/properties/result/items/properties/epDiscountedAmount",
+                        "type": "number"
+                    },
+                    "invoiceDateGMT": {
+                        "$id": "#/properties/result/items/properties/invoiceDateGMT",
+                        "type": "null"
+                    },
+                    "prePOAllowDays": {
+                        "$id": "#/properties/result/items/properties/prePOAllowDays",
+                        "type": "integer"
+                    },
+                    "suppLocationStr": {
+                        "$id": "#/properties/result/items/properties/suppLocationStr",
+                        "type": "null"
+                    },
+                    "defaultSupplierRemitTOAddress": {
+                        "$id": "#/properties/result/items/properties/defaultSupplierRemitTOAddress",
+                        "type": "null"
+                    },
+                    "supplierTaxExampt": {
+                        "$id": "#/properties/result/items/properties/supplierTaxExampt",
+                        "type": "null"
+                    },
+                    "transactionId": {
+                        "$id": "#/properties/result/items/properties/transactionId",
+                        "type": ["string", "null"]
+                    },
+                    "zsnInvoiceCreator": {
+                        "$id": "#/properties/result/items/properties/zsnInvoiceCreator",
+                        "type": "null"
+                    },
+                    "zsnInvoiceCreatorEmailId": {
+                        "$id": "#/properties/result/items/properties/zsnInvoiceCreatorEmailId",
+                        "type": "null"
+                    },
+                    "supplierRemitAddressERPId": {
+                        "$id": "#/properties/result/items/properties/supplierRemitAddressERPId",
+                        "type": "null"
+                    },
+                    "shipToCodeType": {
+                        "$id": "#/properties/result/items/properties/shipToCodeType",
+                        "type": "integer"
+                    },
+                    "shipToCode": {
+                        "$id": "#/properties/result/items/properties/shipToCode",
+                        "type": "null"
+                    },
+                    "shipToLocation": {
+                        "$id": "#/properties/result/items/properties/shipToLocation",
+                        "type": "null"
+                    },
+                    "selfAssessedAmt": {
+                        "$id": "#/properties/result/items/properties/selfAssessedAmt",
+                        "type": "integer"
+                    },
+                    "useTaxApplicable": {
+                        "$id": "#/properties/result/items/properties/useTaxApplicable",
+                        "type": "boolean"
+                    },
+                    "newGrossTotalAmount": {
+                        "$id": "#/properties/result/items/properties/newGrossTotalAmount",
+                        "type": ["integer", "number"]
+                    },
+                    "applyTaxOnGrossTotal": {
+                        "$id": "#/properties/result/items/properties/applyTaxOnGrossTotal",
+                        "type": "boolean"
+                    },
+                    "newTotalTaxAmount": {
+                        "$id": "#/properties/result/items/properties/newTotalTaxAmount",
+                        "type": "integer"
+                    },
+                    "supplierBankingDetailsId": {
+                        "$id": "#/properties/result/items/properties/supplierBankingDetailsId",
+                        "type": "null"
+                    },
+                    "supplierBankingDetails": {
+                        "$id": "#/properties/result/items/properties/supplierBankingDetails",
+                        "type": "null"
+                    },
+                    "visibilityRule": {
+                        "$id": "#/properties/result/items/properties/visibilityRule",
+                        "type": "null"
+                    },
+                    "entitySettings": {
+                        "$id": "#/properties/result/items/properties/entitySettings",
+                        "type": "object",
+                        "additionalProperties": true
+                    },
+                    "dueDate": {
+                        "$id": "#/properties/result/items/properties/dueDate",
+                        "type": "integer"
+                    },
+                    "matchStatus": {
+                        "$id": "#/properties/result/items/properties/matchStatus",
+                        "type": "integer"
+                    },
+                    "approvedGrossTotalAmount": {
+                        "$id": "#/properties/result/items/properties/approvedGrossTotalAmount",
+                        "type": ["integer", "number"]
+                    },
+                    "paymentInApproval": {
+                        "$id": "#/properties/result/items/properties/paymentInApproval",
+                        "type": "integer"
+                    },
+                    "paidAmount": {
+                        "$id": "#/properties/result/items/properties/paidAmount",
+                        "type": "integer"
+                    },
+                    "matchedOn": {
+                        "$id": "#/properties/result/items/properties/matchedOn",
+                        "type": ["null", "number"]
+                    },
+                    "paidOn": {
+                        "$id": "#/properties/result/items/properties/paidOn",
+                        "type": "null"
+                    },
+                    "paymentApprovedOn": {
+                        "$id": "#/properties/result/items/properties/paymentApprovedOn",
+                        "type": ["null", "number"]
+                    },
+                    "confirmStatus": {
+                        "$id": "#/properties/result/items/properties/confirmStatus",
+                        "type": "integer"
+                    },
+                    "paymentStatus": {
+                        "$id": "#/properties/result/items/properties/paymentStatus",
+                        "type": "integer"
+                    },
+                    "autoMatched": {
+                        "$id": "#/properties/result/items/properties/autoMatched",
+                        "type": "boolean"
+                    },
+                    "onHold": {
+                        "$id": "#/properties/result/items/properties/onHold",
+                        "type": "boolean"
+                    },
+                    "invoiceType": {
+                        "$id": "#/properties/result/items/properties/invoiceType",
+                        "type": "integer"
+                    },
+                    "paymentWorkflowId": {
+                        "$id": "#/properties/result/items/properties/paymentWorkflowId",
+                        "type": "null"
+                    },
+                    "paymentInstanceId": {
+                        "$id": "#/properties/result/items/properties/paymentInstanceId",
+                        "type": "null"
+                    },
+                    "utilizeBudget": {
+                        "$id": "#/properties/result/items/properties/utilizeBudget",
+                        "type": "boolean"
+                    },
+                    "budgetSettingsMap": {
+                        "$id": "#/properties/result/items/properties/budgetSettingsMap",
+                        "type": "object",
+                        "additionalProperties": true
+                    },
+                    "systemAttributes": {
+                        "$id": "#/properties/result/items/properties/systemAttributes",
+                        "type": "object",
+                        "additionalProperties": true,
+                        "required": [],
+                        "properties": {
+                            "buyer": {
+                                "$id": "#/properties/result/items/properties/systemAttributes/properties/buyer",
+                                "type": "string"
+                            },
+                            "paymentTerm": {
+                                "$id": "#/properties/result/items/properties/systemAttributes/properties/paymentTerm",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "integrationStatus": {
+                        "$id": "#/properties/result/items/properties/integrationStatus",
+                        "type": "integer"
+                    },
+                    "integrationErrorReasons": {
+                        "$id": "#/properties/result/items/properties/integrationErrorReasons",
+                        "type": ["object", "null"],
+                        "additionalProperties": true
+                    },
+                    "adjustedAmount": {
+                        "$id": "#/properties/result/items/properties/adjustedAmount",
+                        "type": "integer"
+                    },
+                    "editedOn": {
+                        "$id": "#/properties/result/items/properties/editedOn",
+                        "type": ["null", "number"]
+                    },
+                    "editRequestedOn": {
+                        "$id": "#/properties/result/items/properties/editRequestedOn",
+                        "type": ["null", "number"]
+                    },
+                    "cmAdjusted": {
+                        "$id": "#/properties/result/items/properties/cmAdjusted",
+                        "type": "boolean"
+                    },
+                    "sendToReadyForApproval": {
+                        "$id": "#/properties/result/items/properties/sendToReadyForApproval",
+                        "type": "boolean"
+                    },
+                    "epdApplyForPayment": {
+                        "$id": "#/properties/result/items/properties/epdApplyForPayment",
+                        "type": "boolean"
+                    },
+                    "ocrAttachmentId": {
+                        "$id": "#/properties/result/items/properties/ocrAttachmentId",
+                        "type": "null"
+                    },
+                    "deliverToType": {
+                        "$id": "#/properties/result/items/properties/deliverToType",
+                        "type": "integer"
+                    },
+                    "deliverTo": {
+                        "$id": "#/properties/result/items/properties/deliverTo",
+                        "type": "null"
+                    },
+                    "invoiceClosingType": {
+                        "$id": "#/properties/result/items/properties/invoiceClosingType",
+                        "type": "integer"
+                    },
+                    "invoiceApprovalPendingWith": {
+                        "$id": "#/properties/result/items/properties/invoiceApprovalPendingWith",
+                        "type": ["null", "string"]
+                    },
+                    "onHoldReleasedType": {
+                        "$id": "#/properties/result/items/properties/onHoldReleasedType",
+                        "type": "integer"
+                    },
+                    "onHoldReleasedOn": {
+                        "$id": "#/properties/result/items/properties/onHoldReleasedOn",
+                        "type": "null"
+                    },
+                    "submitForCodingUserId": {
+                        "$id": "#/properties/result/items/properties/submitForCodingUserId",
+                        "type": "null"
+                    },
+                    "requester": {
+                        "$id": "#/properties/result/items/properties/requester",
+                        "type": "null"
+                    },
+                    "esignAttachment": {
+                        "$id": "#/properties/result/items/properties/esignAttachment",
+                        "type": "null"
+                    },
+                    "templateId": {
+                        "$id": "#/properties/result/items/properties/templateId",
+                        "type": "null"
+                    },
+                    "recurringInvoiceDate": {
+                        "$id": "#/properties/result/items/properties/recurringInvoiceDate",
+                        "type": "null"
+                    },
+                    "templateName": {
+                        "$id": "#/properties/result/items/properties/templateName",
+                        "type": "null"
+                    },
+                    "zsnInvalidData": {
+                        "$id": "#/properties/result/items/properties/zsnInvalidData",
+                        "type": "null"
+                    },
+                    "useTaxAdjustedAmount": {
+                        "$id": "#/properties/result/items/properties/useTaxAdjustedAmount",
+                        "type": "integer"
+                    },
+                    "bbAdjustedAmount": {
+                        "$id": "#/properties/result/items/properties/bbAdjustedAmount",
+                        "type": "integer"
+                    },
+                    "validCOAForm": {
+                        "$id": "#/properties/result/items/properties/validCOAForm",
+                        "type": "boolean"
+                    },
+                    "refId": {
+                        "$id": "#/properties/result/items/properties/refId",
+                        "type": "null"
+                    },
+                    "originId": {
+                        "$id": "#/properties/result/items/properties/originId",
+                        "type": "null"
+                    },
+                    "originType": {
+                        "$id": "#/properties/result/items/properties/originType",
+                        "type": "null"
+                    },
+                    "poInvoiceExtractionMute": {
+                        "$id": "#/properties/result/items/properties/poInvoiceExtractionMute",
+                        "type": "boolean"
+                    },
+                    "locationSentBySupplier": {
+                        "$id": "#/properties/result/items/properties/locationSentBySupplier",
+                        "type": "null"
+                    },
+                    "extractedBy": {
+                        "$id": "#/properties/result/items/properties/extractedBy",
+                        "type": "null"
+                    },
+                    "previousStatus": {
+                        "$id": "#/properties/result/items/properties/previousStatus",
+                        "type": "integer"
+                    },
+                    "emailType": {
+                        "$id": "#/properties/result/items/properties/emailType",
+                        "type": "boolean"
+                    },
+                    "emailSubject": {
+                        "$id": "#/properties/result/items/properties/emailSubject",
+                        "type": "null"
+                    },
+                    "milestone": {
+                        "$id": "#/properties/result/items/properties/milestone",
+                        "type": "boolean"
+                    },
+                    "poRequester": {
+                        "$id": "#/properties/result/items/properties/poRequester",
+                        "type": "null"
+                    },
+                    "invoiceItems": {
+                        "$id": "#/properties/result/items/properties/invoiceItems",
+                        "type": "null"
+                    },
+                    "attachments": {
+                        "$id": "#/properties/result/items/properties/attachments",
+                        "type": "array",
+                        "additionalItems": true,
+                        "items": {
+                            "$id": "#/properties/result/items/properties/attachments/items",
+                            "type": "null"
+                        }
+                    },
+                    "invoiceTaxes": {
+                        "$id": "#/properties/result/items/properties/invoiceTaxes",
+                        "type": "null"
+                    },
+                    "invoiceCostings": {
+                        "$id": "#/properties/result/items/properties/invoiceCostings",
+                        "type": "null"
+                    },
+                    "invoiceAccountings": {
+                        "$id": "#/properties/result/items/properties/invoiceAccountings",
+                        "type": "null"
+                    },
+                    "systemAttributesStr": {
+                        "$id": "#/properties/result/items/properties/systemAttributesStr",
+                        "type": "string"
+                    },
+                    "budgetSettingsMapString": {
+                        "$id": "#/properties/result/items/properties/budgetSettingsMapString",
+                        "type": "string"
+                    },
+                    "integrationErrorReasonsStr": {
+                        "$id": "#/properties/result/items/properties/integrationErrorReasonsStr",
+                        "type": "string"
+                    },
+                    "documentAmount": {
+                        "$id": "#/properties/result/items/properties/documentAmount",
+                        "type": "null"
+                    },
+                    "invoiceCatLogItems": {
+                        "$id": "#/properties/result/items/properties/invoiceCatLogItems",
+                        "type": "null"
+                    },
+                    "coaflexiFormId": {
+                        "$id": "#/properties/result/items/properties/coaflexiFormId",
+                        "type": "null"
+                    },
+                    "persistObject": {
+                        "$id": "#/properties/result/items/properties/persistObject",
+                        "type": "boolean"
+                    },
+                    "supplierAddressJSON": {
+                        "$id": "#/properties/result/items/properties/supplierAddressJSON",
+                        "type": "string"
+                    },
+                    "supplierAddressRemitJSON": {
+                        "$id": "#/properties/result/items/properties/supplierAddressRemitJSON",
+                        "type": "string"
+                    },
+                    "defaultSupplierRemitTOAddressJSON": {
+                        "$id": "#/properties/result/items/properties/defaultSupplierRemitTOAddressJSON",
+                        "type": "string"
+                    },
+                    "coaflexiFormInstanceId": {
+                        "$id": "#/properties/result/items/properties/coaflexiFormInstanceId",
+                        "type": "null"
+                    },
+                    "coaflexiFormInstanceVersion": {
+                        "$id": "#/properties/result/items/properties/coaflexiFormInstanceVersion",
+                        "type": "integer"
+                    },
+                    "supplierBankingDetailsJSON": {
+                        "$id": "#/properties/result/items/properties/supplierBankingDetailsJSON",
+                        "type": "string"
+                    },
+                    "errorReasonsStr": {
+                        "$id": "#/properties/result/items/properties/errorReasonsStr",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "processingErrors": {
+            "$id": "#/properties/processingErrors",
+            "type": "null"
+        }
+    }
+}

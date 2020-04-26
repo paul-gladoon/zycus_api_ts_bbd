@@ -1,7 +1,8 @@
 import {
   businessUnitsSchema204,
   businessUnitsSchema400,
-  companyEntities204
+  companyEntities204,
+  invoiceFilterSchema200
 } from './index'
 
 const schemas = {
@@ -12,6 +13,11 @@ const schemas = {
     },
     companyEntities: {
       schema204: companyEntities204
+    }
+  },
+  invoiceResource: {
+    invoiceFilter: {
+      schema200: invoiceFilterSchema200
     }
   }
 }

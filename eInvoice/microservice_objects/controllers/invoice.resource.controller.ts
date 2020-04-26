@@ -7,7 +7,7 @@ chai.use(schema)
 const {assert} = chai
 const {I} = inject()
 
-class CBLController {
+class InvoiceResourceController {
   private headers: object
   private endpointFilter: string
 
@@ -25,18 +25,11 @@ class CBLController {
     this.headers['x-zycus-trackingNumber'] = data.trackingNumber
   }
 
-  public async getCompanyEntities(requestUserId: string, requestHeaders?: object) {
-    const response = await I.sendGetRequest(`/CBL/company/${requestUserId}`, requestHeaders || this.headers)
-    const {cbl: {companyEntities}} = schemas
-
-    return this.switcher(response, companyEntities)
-  }
-
-  public async getBusinessUnits(requestUserId: string, companyCode: string, requestHeaders?: object) {
-    const response = await I.sendGetRequest(`/CBL/bu/${requestUserId}/${companyCode}`, requestHeaders || this.headers) as any
-    const {cbl: {businessUnits}} = schemas
-
-    return this.switcher(response, businessUnits)
+  public async postInvoiceFilter(requestBody, requestHeaders?: object) {
+    const response = await I.sendPostRequest(`/invoice${this.endpointFilter}`, requestBody, requestHeaders || this.headers)
+    const {invoiceResource: {invoiceFilter}} = schemas
+    
+    return this.switcher(response, invoiceFilter)
   }
 
   private switcher(responseData, schemaObj) {
@@ -63,4 +56,4 @@ class CBLController {
   }
 }
 
-export {CBLController}
+export {InvoiceResourceController}

@@ -1,0 +1,46 @@
+{
+	"trackingNumber": "12345",
+	"info1": null,
+	"info2": null,
+	"pagination": {
+		"totalRecords": 2,
+		"maxRows": 100,
+		"pageNumber": 1
+	},
+	"sortConditions": [
+		{
+			"fieldName": "createdOn",
+			"direction": "ASC"
+		}
+	],
+	"criteriaGroup": {
+		"logicalOperator":"OR",
+		"criteriaGroup": [
+			{
+				"logicalOperator":"AND",
+				"criteria": [
+					{
+						"fieldName": "invoiceNumber",
+						"operation": "CONTAINS",
+						"value": "API_AutoEinvoice",
+						"minValue": 0,
+						"maxValue": 0
+					}
+				]
+			},
+			{
+				"logicalOperator": "AND",
+				"criteria": [
+					{
+						"fieldName": "status",
+						"operation": "IN",
+						"multivalue": [50],
+						"minValue": 0,
+						"maxValue": 0
+					}
+				]
+			}
+		]
+	},
+	"locale": "EN-US"
+}

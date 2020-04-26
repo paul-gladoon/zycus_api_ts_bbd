@@ -1,5 +1,4 @@
-export API_RUN_ENV=https://api.github.com
-export API_TOKEN=b4e4801ac59bc670d4eabf4ec16b7149c52e3a19
+export API_RUN_ENV=http://ha.app.qc.zycus.net:53680/einvoice/soa-services/restapi
 
 rm -rf ./output
 
