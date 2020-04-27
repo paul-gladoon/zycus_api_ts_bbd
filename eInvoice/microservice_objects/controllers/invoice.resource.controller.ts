@@ -28,13 +28,13 @@ class InvoiceResourceController {
   public async postInvoiceFilter(requestBody, requestHeaders?: object) {
     const response = await I.sendPostRequest(`/invoice${this.endpointFilter}`, requestBody, requestHeaders || this.headers)
     const {invoiceResource: {invoiceFilter}} = schemas
-    
+
     return this.switcher(response, invoiceFilter)
   }
 
   private switcher(responseData, schemaObj) {
-    function schemaChecker(schema) {
-      if (!schema) throw new Error(`Please add schema for the status "${responseData.status}"`)
+    function schemaChecker(schemaData) {
+      if (!schemaData) throw new Error(`Please add schema for the status "${responseData.status}"`)
     }
 
     switch(responseData.status) {
